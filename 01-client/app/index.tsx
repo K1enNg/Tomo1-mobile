@@ -11,8 +11,8 @@ export default function Index() {
         flex: 1,
       }}
     >
-      {/* <Q1Title/> */}
-      <SignUp/>
+      <Q1Title/>
+      {/* <SignUp/> */}
     </View>
   );
 }

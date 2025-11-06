@@ -57,7 +57,7 @@ export default function Q1() {
           style = {{
             width: 360,
             height: 24,
-            marginTop: 10
+            marginTop: 70
           }}
           contentFit="cover"
         />
@@ -78,7 +78,12 @@ export default function Q1() {
 
       </View>
 
-        <View>
+        <View
+        
+          style={{
+            marginBottom: 30,
+          }}
+        >
           {
             rows.map((row, rowIndex) => (
               <View key={rowIndex} style={styles.row}>
@@ -105,7 +110,6 @@ export default function Q1() {
           } 
         </View>
 
-      
       <View style= {{
           justifyContent: "center",
           alignItems: "center",
@@ -116,8 +120,16 @@ export default function Q1() {
           marginBottom: 30
         }}>
 
-        <Pressable
-          onPress={() => console.log("Pressed")}>
+         <Pressable
+            style = {{
+              width: 340,
+              height: 30,
+            }}
+            onPress={() => {   
+              router.push('/Pause');
+          }}
+        >
+        
 
           <Text style = {[styles.nunitoSemiBold, {fontSize: 24, textAlign: "center"}]}>
             Tiếp Tục
@@ -175,3 +187,5 @@ const styles = StyleSheet.create({
     height: 60
   }
 })
+
+export {Q1};

@@ -4,7 +4,7 @@ import React from "react";
 import * as SplashScreen from 'expo-splash-screen';
 import {useEffect} from 'react';
 import {useFonts} from "expo-font";
-import { Redirect, useRouter } from "expo-router";
+import { useRouter } from "expo-router";
 
 
 export default function Q1Title() {
@@ -35,7 +35,7 @@ export default function Q1Title() {
           style = {{
             width: 360,
             height: 24,
-            marginTop: 30
+            marginTop: 100
           }}
           contentFit="cover"
         />
@@ -86,7 +86,7 @@ export default function Q1Title() {
             height: 30,
           }}
           onPress={() => {   
-            router.push("/Q1");
+            router.push('/Q1');
           }}
         >
 
@@ -115,3 +115,5 @@ const styles = StyleSheet.create({
     color: "#555",
   },
 });
+
+export { Q1Title };
