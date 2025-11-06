@@ -1,8 +1,5 @@
 import { View } from "react-native";
-import Button from "./components/button";
-import CloseBtn from "./components/closeBtn";
-import ProgressBar from "./components/progressBar";
-import SettingBtn from "./components/settingBtn";
+import Flow3 from "./pages/flow3/flow3";
 
 export default function Index() {
   return (
@@ -14,11 +11,8 @@ export default function Index() {
         alignItems: "center",
       }}
     >
-      {/* <SignUp/> */}
-      <ProgressBar progress={1} />
-      <CloseBtn />
-      <SettingBtn />
-      <Button>Tiếp tục</Button>
+      {/* <SignUp /> */}
+      <Flow3 />
     </View>
   );
 }

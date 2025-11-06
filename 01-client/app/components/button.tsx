@@ -8,11 +8,12 @@ const button3 = "rgba(255, 165, 68, 1)";
 
 interface ButtonProps {
   children: React.ReactNode;
+  style?: {};
 }
 
-function Button({ children, ...props }: ButtonProps) {
+function Button({ children, style, ...props }: ButtonProps) {
   return (
-    <TouchableOpacity style={styles.button} {...props}>
+    <TouchableOpacity style={[styles.button, style]} {...props}>
       <LinearGradient
         colors={[button1, button2, button3]}
         start={{ x: 0, y: 0 }}
