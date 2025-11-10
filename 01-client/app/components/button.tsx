@@ -13,7 +13,6 @@ const button3 = "rgba(255, 165, 68, 1)";
 
 interface ButtonProps extends TouchableOpacityProps {
   children: React.ReactNode;
-  style?: {};
 }
 
 function Button({ children, ...props }: ButtonProps) {
@@ -33,7 +32,7 @@ function Button({ children, ...props }: ButtonProps) {
 
 const styles = StyleSheet.create({
   button: {
-    width: "88%",
+    width: "100%",
   },
   content: {
     padding: 12,
