@@ -1,7 +1,13 @@
 import Button from "@/app/button";
 import { useRouter } from "expo-router";
 import React from "react";
-import { Image, StyleSheet, Text, View } from "react-native";
+import {
+  Image,
+  ImageSourcePropType,
+  StyleSheet,
+  Text,
+  View,
+} from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import CloseBtn from "./closeBtn";
 import ProgressGroup from "./progressGroup";
@@ -10,19 +16,21 @@ export interface Flow3Props {
   progress?: number;
   title?: string;
   lesson?: string;
+  source: ImageSourcePropType;
   descript: string;
-  button: string;
+  button?: string;
 }
 
 const Flow3: React.FC<Flow3Props> = ({
   progress,
+  source,
   title,
   lesson,
   descript,
   button,
 }) => {
   const router = useRouter();
-  const testBtn = () => alert("pressed");
+  const testBtn = () => router.push("/bodyParts");
 
   return (
     <SafeAreaView style={styles.container}>
@@ -39,15 +47,14 @@ const Flow3: React.FC<Flow3Props> = ({
         </View>
       )}
       <View>
-        <Image
-          source={require("@/assets/images/mascot_logo.png")}
-          style={styles.img}
-        />
+        <Image source={source} style={styles.img} />
         <Text style={styles.descript}>{descript}</Text>
       </View>
-      <Button style={styles.button} onPress={testBtn}>
-        {button}
-      </Button>
+      {button && (
+        <Button style={styles.button} onPress={testBtn}>
+          {button}
+        </Button>
+      )}
     </SafeAreaView>
   );
 };

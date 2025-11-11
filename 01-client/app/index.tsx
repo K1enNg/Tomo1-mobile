@@ -1,6 +1,6 @@
-import { PAGE_2 } from "@/constants/flow3";
+import { PAGE_1 } from "@/constants/bodyParts";
 import { View } from "react-native";
-import Flow3 from "./flow3";
+import BodyParts from "./bodyParts";
 
 export default function Index() {
   return (
@@ -12,7 +12,8 @@ export default function Index() {
         alignItems: "center",
       }}
     >
-      <Flow3 {...PAGE_2} />
+      {/* <Flow3 {...PAGE_3} /> */}
+      <BodyParts {...PAGE_1} />
       {/* <Information {...PAGE_3} /> */}
     </View>
   );

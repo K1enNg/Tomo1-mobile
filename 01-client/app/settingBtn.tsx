@@ -1,10 +1,9 @@
-import { Feather } from "@expo/vector-icons";
-import { TouchableOpacity, TouchableOpacityProps } from "react-native";
+import { Image, TouchableOpacity, TouchableOpacityProps } from "react-native";
 
 function SettingBtn({ ...props }: TouchableOpacityProps) {
   return (
     <TouchableOpacity {...props}>
-      <Feather name="settings" color={"#000"} size={24} />
+      <Image source={require("@/assets/images/flow3s/settingIcon.png")} />
     </TouchableOpacity>
   );
 }
