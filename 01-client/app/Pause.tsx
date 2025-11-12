@@ -1,8 +1,18 @@
-import { View, StyleSheet} from "react-native";
+import { View, StyleSheet } from "react-native";
 import { Image } from "expo-image";
-import React from "react";
+import React, { useEffect } from "react";
+import { useRouter } from "expo-router";
+
 
 export default function Pause() {
+  const router = useRouter();
+
+  useEffect(() => {
+    let timer = setTimeout(() => {
+      router.push("/Q2Title"); 
+    }, 5000);
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <View style={styles.container}>

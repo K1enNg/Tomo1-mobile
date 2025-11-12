@@ -1,21 +1,37 @@
 import { Text, View, StyleSheet, Pressable } from "react-native";
 import { Image } from "expo-image";
+import React from "react";
 import * as SplashScreen from 'expo-splash-screen';
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { useFonts } from "expo-font";
 import { useRouter } from "expo-router";
 
 
-export default function Q1Title() {
+export default function Q2Title() {
   const router = useRouter();
-  
+
+  const [loaded, error] = useFonts({
+    'Nunito-Light': require('../assets/fonts/Nunito/static/Nunito-Light.ttf'),
+    'Nunito-SemiBold': require('../assets/fonts/Nunito/static/Nunito-SemiBold.ttf')
+  });
+
+  useEffect(() => {
+    if (loaded || error) {
+      SplashScreen.hideAsync();
+    }
+  }, [loaded, error]);
+
+  if (!loaded && !error) {
+    return null;
+  }
+
   return (
     <View style={styles.container}>
 
        <View>
 
         <Image
-          source={require("../assets/images/Group95.png")}
+          source={require("../assets/images/ProgressBar100.png")}
           style = {{
             width: 360,
             height: 24,
@@ -48,8 +64,8 @@ export default function Q1Title() {
         }}>
 
         <Text style = {[styles.nunitoLight, {marginBottom: 20, fontSize: 18, textAlign: "center"}]}> 
-          Ba mẹ đọc các bộ phận cơ thể và để bé chỉ trên cơ thể mình. 
-          Mỗi khi trẻ chỉ đúng các bộ phận trên cơ thể, hãy yêu cầu trẻ nhắc lại từ đó theo mình.
+          Ba mẹ bày các thẻ học trên bàn, yêu cầu trẻ chỉ đúng tên bộ phận cơ thể khi đọc. 
+          Mỗi khi trẻ chỉ đúng thẻ, hãy yêu cầu trẻ nhắc lại từ đó theo mình.
         </Text>
 
       </View>
@@ -70,7 +86,7 @@ export default function Q1Title() {
             height: 30,
           }}
           onPress={() => {   
-            router.push('/Q1');
+            router.push('/Q2');
           }}
         >
 
@@ -100,4 +116,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export { Q1Title };
+export { Q2Title };

@@ -1,9 +1,7 @@
-import { Text, View, StyleSheet, Pressable} from "react-native";
+import { Text, View, StyleSheet, Pressable } from "react-native";
 import { Image } from "expo-image";
-import React from "react";
 import * as SplashScreen from 'expo-splash-screen';
-import {useEffect} from 'react';
-import {useFonts} from "expo-font";
+import React ,{ useEffect } from 'react';
 import { useRouter } from "expo-router";
 
 
@@ -16,7 +14,7 @@ export default function Q1() {
     { id: 3, label: 'Mắt', image: require('../assets/images/mat.png') },
     { id: 4, label: 'Mũi', image: require('../assets/images/mui.png') },
     { id: 5, label: 'Môi', image: require('../assets/images/moi.png') },
-    { id: 6, label: 'Răng', image: require('../assets/images/rang.png') },
+    { id: 6, label: 'Răng', image: require('../assets/images/rang.png') }, 
     { id: 7, label: 'Miệng', image: require('../assets/images/mieng.png') },
     { id: 8, label: 'Bàn tay', image: require('../assets/images/bantay.png') },
     { id: 9, label: 'Ngón tay', image: require('../assets/images/ngontay.png') },
@@ -30,21 +28,6 @@ export default function Q1() {
   const rows = [];
   for (let i = 0; i < items.length; i += 2) {
     rows.push(items.slice(i, i + 2))
-  }
-
-  const [loaded, error] = useFonts({
-    'Nunito-Light': require('../assets/fonts/Nunito/static/Nunito-Light.ttf'),
-    'Nunito-SemiBold': require('../assets/fonts/Nunito/static/Nunito-SemiBold.ttf')
-  });
-
-  useEffect(() => {
-    if (loaded || error) {
-      SplashScreen.hideAsync();
-    }
-  }, [loaded, error]);
-
-  if (!loaded && !error) {
-    return null;
   }
 
   return (
@@ -72,16 +55,15 @@ export default function Q1() {
           height: 100
         }}>
 
-        <Text style = {[styles.nunitoLight, {marginBottom: 20, fontSize: 18, textAlign: "center"}]}> 
+        <Text style = {[styles.nunitoLight, {fontSize: 18, textAlign: "center"}]}> 
           Ba mẹ có thể đọc theo các bộ phận cơ thể dưới đây và ấn chọn khi đã đọc bộ phận đó rồi nhé.
         </Text>
 
       </View>
 
         <View
-        
           style={{
-            marginBottom: 30,
+            marginBottom: 20,
           }}
         >
           {
@@ -99,7 +81,7 @@ export default function Q1() {
                           source={item.image}
                           style={styles.image}
                         />
-                        <Text style={styles.nunitoSemiBold}>{item.label}</Text>
+                        <Text style={[styles.nunitoLight, {fontSize: 20}]}>{item.label}</Text>
 
                       </Pressable>
                     </View>
@@ -129,7 +111,6 @@ export default function Q1() {
               router.push('/Pause');
           }}
         >
-        
 
           <Text style = {[styles.nunitoSemiBold, {fontSize: 24, textAlign: "center"}]}>
             Tiếp Tục
@@ -163,8 +144,8 @@ const styles = StyleSheet.create({
     marginBottom: 20 
   },
   card:{
-    width: 140,
-    height: 55,
+    width: 145,
+    height: 60,
     backgroundColor: "white",
     borderRadius: 10,
     alignItems: "center",
