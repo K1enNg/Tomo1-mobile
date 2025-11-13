@@ -3,7 +3,7 @@ import { Image } from "expo-image";
 import { useRouter } from "expo-router";
 import ProgressGroup from "./progressGroup";
 import React, {useState} from "react";
-import QuizFrame from "./QuizFrame";
+import QuizFrame from "./flow2/QuizFrame";
 
 export interface QuizProps {
     progress: number;
@@ -39,8 +39,7 @@ const Flow2Quiz: React.FC<QuizProps> = ({
     <View style={styles.container}>
 
       <View style={{ 
-        width: "100%",
-        marginHorizontal: 10
+        width: "100%"
       }}>
         <ProgressGroup progress={progress}/>
       </View>
@@ -54,7 +53,7 @@ const Flow2Quiz: React.FC<QuizProps> = ({
         height: 100
       }}>
 
-        <Text style={[styles.nunitoSmall, { marginBottom: 20, fontSize: 18, textAlign: "center" }]}>
+        <Text style={[styles.nunitoLight, { marginBottom: 10, textAlign: "center" }]}>
           {description}
         </Text>
 
@@ -162,6 +161,11 @@ const styles = StyleSheet.create({
   },
   layoutLarge: {
     position: "relative",
+  },
+   nunitoLight: {
+    fontFamily: "Nunito-Light",
+    color: "#555", 
+    fontSize: 16
   },
   nunitoSmall: {
     fontFamily: "Nunito-SemiBold",

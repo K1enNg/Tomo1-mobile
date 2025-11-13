@@ -23,48 +23,50 @@ const QuizTitle: React.FC<QuizTitleProps> = ({
 
   time == true && useEffect(() => {
       let timer = setTimeout(() => {
-        router.push("/"); 
+        // router.push("/"); 
+        console.log("Timer finished")
       }, 5000);
       return () => clearTimeout(timer);
     }, []);
 
   return (
     <View style={styles.container}>
-
+      
       <View style={{ 
-        width: "100%",
-        marginHorizontal: 10
+        width: "100%"
       }}>
-        <ProgressGroup progress={progress ?? 0}/>
+       { progress && <ProgressGroup progress={progress ?? 0}/> }
       </View>
 
-      <View>
+      <View style= {{ 
+          flex: time == true ? 0 : 1,
+          justifyContent: "center",
+          alignItems: "center",
+          width: "100%",
+        }}>
         { source && <Image
           source={source}
           style = {{
             width: 256,
             height: 248,
-            marginTop: 100
           }}
         /> }
       </View>
 
       <View style= {{
-          flex: 1,
-          justifyContent: "center",
-          alignItems: "center",
           width: 340,
-          height: 100
+          height: 100,
+          marginBottom: 80,
         }}>
 
-        {description && <Text style = {[styles.nunitoLight, {marginBottom: 20, fontSize: 18, textAlign: "center"}]}> 
+        {description && <Text style = {[styles.nunitoLight, {fontSize: 18, textAlign: "center"}]}> 
           {description}
         </Text>
         }
 
       </View>
       
-      <View style= {{
+        { btnText && <View style= {{
           justifyContent: "center",
           alignItems: "center",
           backgroundColor:"#fcc555",
@@ -74,7 +76,7 @@ const QuizTitle: React.FC<QuizTitleProps> = ({
           marginBottom: 60
         }}>
 
-        <Pressable
+          { btnText && <Pressable
           style = {{
             width: 340,
             height: 30,
@@ -85,11 +87,11 @@ const QuizTitle: React.FC<QuizTitleProps> = ({
           }}
         >
 
-          <Text style = {[styles.nunitoSemiBold, {fontSize: 24, textAlign: "center"}]}>
+          { btnText && <Text style = {[styles.nunitoSemiBold, {fontSize: 24, textAlign: "center"}]}> 
             {btnText}
-          </Text>
-        </Pressable>
-      </View>
+          </Text> }
+        </Pressable> } 
+      </View>}
     </View>
   );
 }
