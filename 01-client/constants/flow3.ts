@@ -1,4 +1,4 @@
-import { Flow3Props } from "@/app/flow3";
+import { Flow3Props } from "@/screens/flow3";
 
 export const PAGE_1: Flow3Props = {
   title: "Bài 01",

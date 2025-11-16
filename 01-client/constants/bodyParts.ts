@@ -1,4 +1,4 @@
-import { BodyPartsProps } from "@/app/bodyParts";
+import { BodyPartsProps } from "@/screens/bodyParts";
 
 export const PAGE_1: BodyPartsProps = {
   progress: 0.7,

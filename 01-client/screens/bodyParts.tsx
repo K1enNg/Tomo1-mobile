@@ -8,7 +8,7 @@ import {
   View,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import ProgressGroup from "./progressGroup";
+import ProgressGroup from "@/components/shared/progressGroup";
 
 export interface BodyPartsProps {
   progress: number;
