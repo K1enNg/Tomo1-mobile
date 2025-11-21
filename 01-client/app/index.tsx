@@ -33,7 +33,9 @@ export default function Index() {
   // Redirect to Flow 1
   // return <Redirect href= {ROUTES.INFORMATION1} />;
 
-  // return router.push(ROUTES.INFORMATION1);
   // Ridirect to Sitemap for testing
-  return <Redirect href="/_sitemap" />;
+  // return <Redirect href="/_sitemap" />;
+
+  //Redirect to Entry Test Q1 For testing Data Collection Logic
+  return <Redirect href={ROUTES.ENTRY_TEST1}/>
 }

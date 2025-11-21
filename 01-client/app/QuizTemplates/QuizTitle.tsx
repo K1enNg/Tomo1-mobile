@@ -2,7 +2,7 @@ import { Text, View, StyleSheet, Pressable, ImageSourcePropType } from "react-na
 import { Image } from "expo-image";
 import React, { useEffect } from 'react';
 import { useRouter } from "expo-router";
-import ProgressGroup from "./progressGroup";
+import ProgressGroup from "../progressGroup";
 
 export interface QuizTitleProps {
     progress?: number;

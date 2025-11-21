@@ -1,13 +1,13 @@
 import { Text, View, StyleSheet, Pressable, Modal } from "react-native";
 import { Image } from "expo-image";
 import { useRouter } from "expo-router";
-import ProgressGroup from "./progressGroup";
+import ProgressGroup from "../progressGroup";
 import React, {useState} from "react";
-import QuizFrame from "./QuizFrame";
+import QuizFrame from "./QuizFrameZoom";
 import { QuizProps } from "@/QuestionnaireLogic/quiz";
 import ProcessAnswer from "@/QuestionnaireLogic/ProcessLogic";
 
-const Flow2Quiz: React.FC<QuizProps> = ({
+const MultiChoiceQuiz: React.FC<QuizProps> = ({
   questionId,
   progress,
   items,
@@ -135,7 +135,7 @@ const Flow2Quiz: React.FC<QuizProps> = ({
   );
 }
 
-export default Flow2Quiz;
+export default MultiChoiceQuiz;
 
 const styles = StyleSheet.create({
   container: {

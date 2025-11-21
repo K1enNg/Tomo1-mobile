@@ -8,6 +8,7 @@ export default function ProcessAnswer(questionId : string, userAnswer : any) {
 
     switch(quiz.type){
         case "single" :{ 
+            answers[questionId] = userAnswer;
             break;
         }
         case "multiple" :{ 
@@ -17,13 +18,7 @@ export default function ProcessAnswer(questionId : string, userAnswer : any) {
                 answers[questionId].push(userAnswer); 
             } 
             //else {
-            // answers[questionId] = answers[questionId].filter(v => v !== value);\
-            break;
-        }
-        case "text" :{ 
-            break;
-        }
-        case "number" :{ 
+            // answers[questionId] = answers[questionId].filter(v => v !== value);
             break;
         }
     }

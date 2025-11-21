@@ -1,11 +1,12 @@
 import { ImageSourcePropType } from "react-native";
 
-export type QuizType = "text" | "number" | "multiple" | "single";
+export type QuizType = "multiple" | "single";
 
 export interface Quiz {
     questionId: string;
     type: QuizType;
-    answer?: any;
+    answer?: any;  
+    next?: string;
 }
 
 export interface item {
@@ -20,6 +21,14 @@ export interface QuizProps extends Quiz {
     description?: string;
     btnText?: string;
     zoom?: boolean;
-    next?: string;
+  
     audio?: ImageSourcePropType
+}
+
+export interface SingleChoiceQuizProps extends Quiz {
+    image?: ImageSourcePropType;
+    title?: string;
+    audioPlayer?: ImageSourcePropType;
+    text: string[];
+    choices: string[];
 }
