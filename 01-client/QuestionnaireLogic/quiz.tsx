@@ -21,7 +21,6 @@ export interface QuizProps extends Quiz {
     description?: string;
     btnText?: string;
     zoom?: boolean;
-  
     audio?: ImageSourcePropType
 }
 
