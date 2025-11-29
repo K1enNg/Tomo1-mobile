@@ -1,20 +1,3 @@
-## ý tưởng:
-
-- Request sẽ là mảng các câu hỏi:
-
-```
-{
-  "child_id": "A123",
-  "answers": [
-    { "question_id": 1, "answer": "yes" },
-  ]
-}
-```
-
-- sau đó sẽ lặp qua các câu trả lời từ request rồi kiểm tra có trong database hay không.
-- Quiz trong db sẽ có dạng:
-
-```
 [
   {
     id: 1,
@@ -41,6 +24,3 @@
     correct_answer: 5,
   },
 ];
-```
-
-- Sau đó tính điểm trên từng trường hợp rồi trả về số điểm và details

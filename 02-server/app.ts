@@ -1,15 +1,18 @@
-import express, { Request, Response } from 'express'
-import dotenv from 'dotenv'
+import express, { Request, Response } from "express";
+import dotenv from "dotenv";
+import { quizRoute } from "./src/routes/quizRoute";
 
-dotenv.config()
+dotenv.config();
 
-const app = express()
-const port = process.env.PORT 
+const app = express();
+const port = process.env.PORT;
 
-app.get('/', (req: Request, res: Response) => {
-  res.send('This is TOMO backend')
-})
+app.use("/api/quiz", quizRoute);
+
+app.get("/", (req: Request, res: Response) => {
+  res.send("This is TOMO backend");
+});
 
 app.listen(port, () => {
-  console.log(`App is listening on port ${port}`)
-})
+  console.log(`App is listening on port ${port}`);
+});
