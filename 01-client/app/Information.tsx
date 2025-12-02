@@ -1,25 +1,15 @@
 import React from "react";
+import { InformationProps } from "@/types/components";
 import {
   ScrollView,
   View,
   Image,
   Text,
   TouchableOpacity,
-  ImageSourcePropType,
   StyleSheet,
   useWindowDimensions,
 } from "react-native";
 import { router } from "expo-router";
-
-export interface InformationProps {
-  source: ImageSourcePropType;
-  title: string;
-  description: string;
-  buttonLabels: string[];
-  extraText?: string;
-  nextScreen?: string;
-  skipScreen?: string;
-}
 
 const Information: React.FC<InformationProps> = ({
   source,

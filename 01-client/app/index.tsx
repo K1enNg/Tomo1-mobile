@@ -26,12 +26,14 @@
 // }
 
 import { Redirect, useRouter} from "expo-router";
-import { ROUTES } from "../constants/naviagtion";
+import { ROUTES } from "@/constants/Navigation";
 
 export default function Index() {
   const router = useRouter();
   // Redirect to Flow 1
   return <Redirect href= {ROUTES.INFORMATION1} />;
+
+    // return <Redirect href= {ROUTES.ENTRY_TEST1} />;
 
   // Ridirect to Sitemap for testing
   // return <Redirect href="/_sitemap" />;

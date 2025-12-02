@@ -1,6 +1,6 @@
 import { QuizData, item } from "@/types/quiz";
 import { ROUTES } from "@/constants/Navigation";
-import { EntryTest_1, EntryTest_2 } from "@/constants/entryTest/Quizzes";
+import * as ET from "@/constants/entryTest/Quizzes";
 
 const items1: item[] = [
     { id: 1, label: 'Tai', image: require('../assets/images/flow2/tai.png') },
@@ -69,10 +69,44 @@ export const QUIZ_REGISTRY: Record<string, QuizData> = {
         items: items2,
         zoom: true,
         audio: require("../assets/images/flow2/Audio.png"),
-        answer: [1, 3, 2, 4, 5]
+        answer: [1, 3, 2, 4, 5],
     },
-    "ET_1": EntryTest_1,
-    "ET_2": EntryTest_2,
+    "ET_F129": {
+        type: "title",
+        progress: 1.0,
+        source: require("../assets/images/mascot_logo.png"),
+        description: "Ba mẹ cùng con làm bài đánh giá nhỏ để chọn lớp học phù hợp nhé!",
+        btnText: "Tiếp Tục",
+        time: false,
+        next: ROUTES.ENTRY_TEST1
+    },
+
+    "ET_1": ET.EntryTest_1,
+    "ET_2": ET.EntryTest_2,
+    "ET_3": ET.EntryTest_3,
+    "ET_4": ET.EntryTest_4,
+    "ET_5": ET.EntryTest_5,
+    "ET_6": ET.EntryTest_6,
+    "ET_7": ET.EntryTest_7,
+    "ET_8": ET.EntryTest_8,
+    "ET_9": ET.EntryTest_9,
+    "ET_10": ET.EntryTest_10,
+    "ET_11": ET.EntryTest_11,
+    "ET_12": ET.EntryTest_12,
+    "ET_13": ET.EntryTest_13,
+    "ET_14": ET.EntryTest_14,
+    "ET_15": ET.EntryTest_15,
+    "ET_16": ET.EntryTest_16,
+    "ET_17": ET.EntryTest_17,
+    "ET_19": ET.EntryTest_19,
+    "ET_23": ET.EntryTest_23,
+    "ET_27": ET.EntryTest_27,
+    "ET_29": ET.EntryTest_29,
+    "ET_32": ET.EntryTest_32,
+    "ET_34": ET.EntryTest_34,
+
+
+
     "Flow3_Page1": {
         type: "lesson",
         title: "Bài 01",
@@ -97,7 +131,7 @@ export const QUIZ_REGISTRY: Record<string, QuizData> = {
     },
     "Flow3_Page4": {
         type: "lesson",
-        source: require("../assets/images/tai.png"),
+        source: require("../assets/images/flow3s/tai.png"),
         descript: "Tai"
     }
 };

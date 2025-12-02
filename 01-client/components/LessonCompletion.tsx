@@ -3,7 +3,6 @@ import { useRouter } from "expo-router";
 import React from "react";
 import {
   Image,
-  ImageSourcePropType,
   StyleSheet,
   Text,
   View,
@@ -12,8 +11,6 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import CloseBtn from "./ui/CloseBtn";
 import ProgressGroup from "./ProgressGroup";
 import { LessonCompletionProps } from "@/types/components";
-
-
 
 const LessonCompletion: React.FC<LessonCompletionProps> = ({
   progress,

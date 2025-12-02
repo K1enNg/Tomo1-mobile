@@ -1,7 +1,6 @@
 import React from "react";
 import {
   Image,
-  ImageSourcePropType,
   StyleSheet,
   Text,
   TouchableWithoutFeedback,

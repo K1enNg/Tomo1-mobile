@@ -121,7 +121,7 @@ const MultiChoiceQuiz: React.FC<QuizProps> = ({
             backgroundColor: "#fcc555",
           }}
           onPress = {() => {
-            router.push(next);
+            router.push(next as any);
           }}
         >
           { btnText && <Text style={[styles.nunitoLarge, { textAlign: "center" }]}>

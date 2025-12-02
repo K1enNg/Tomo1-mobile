@@ -21,11 +21,11 @@ const SignUp = () => {
     <SafeAreaView style={styles.container}>
       <Text style={styles.title}>{title}</Text>
 
-      {/* Password input */}
+
       <View style={styles.inputContainer}>
         <Text style={styles.inlineLabel}>Mật khẩu</Text>
         <TextInput
-          style={styles.input} // space for label
+          style={styles.input} 
           placeholder="Nhập mật khẩu"
           placeholderTextColor="#aaa"
           secureTextEntry={!showPassword}
@@ -44,7 +44,6 @@ const SignUp = () => {
         </TouchableOpacity>
       </View>
 
-      {/* Confirm password input */}
       <View style={styles.inputContainer}>
         <Text style={styles.inlineLabel}>Xác nhận mật khẩu</Text>
         <TextInput
@@ -84,8 +83,8 @@ const SignUp = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center", // vertical center
-    alignItems: "center", // horizontal center
+    justifyContent: "center", 
+    alignItems: "center", 
     paddingHorizontal: 20,
   },
   title: {
@@ -127,7 +126,6 @@ const styles = StyleSheet.create({
   spacer: {
     height: 80,
   },
-
   button: {
     backgroundColor: "#FFD700",
     width: "90%",

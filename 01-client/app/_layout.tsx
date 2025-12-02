@@ -4,6 +4,7 @@ import * as SplashScreen from 'expo-splash-screen';
 import { useFonts } from "expo-font";
 import React ,{ useEffect } from 'react';
 import { Stack } from "expo-router/stack";
+import { SessionProvider } from "./information/SessionContext";
 
 
 export default function RootLayout() {
@@ -26,18 +27,21 @@ export default function RootLayout() {
     }
 
   return (
+    <SessionProvider>
     <Stack
       screenOptions={{
         headerShown: false,
-        contentStyle: { backgroundColor: "#2bf5fb" }, 
+        contentStyle: { backgroundColor: "#CDEFF8" }, 
       }}
     />
+    </SessionProvider>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#2bf5fb",
+    backgroundColor: "#CDEFF8",
   },
 });
+

@@ -1,5 +1,5 @@
 import { ImageSourcePropType } from "react-native";
-import { QuizTitleProps, LessonCompletionProps } from "./components";
+import { QuizTitleProps, LessonCompletionProps, InformationProps } from "./components";
 
 export type QuizType = "multiple" | "single";
 

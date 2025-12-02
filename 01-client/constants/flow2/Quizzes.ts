@@ -1,6 +1,6 @@
 import { item } from "@/QuestionnaireLogic/quiz";
 import { QuizProps } from "@/QuestionnaireLogic/quiz";
-import { ROUTES } from "../naviagtion";
+import { ROUTES } from "../Navigation";
 
 const items1: item[] = [
     { id: 1, label: 'Tai', image: require('../../assets/images/flow2/tai.png') },
