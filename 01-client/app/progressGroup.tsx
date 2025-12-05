@@ -1,7 +1,7 @@
 import { View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import ProgressBar from "./progressBar";
-import SettingBtn from "./settingBtn";
+import SettingBtn from "@/components/ui/SettingBtn";
 
 function ProgressGroup({ progress }: { progress: number }) {
   return (

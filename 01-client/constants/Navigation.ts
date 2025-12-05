@@ -1,7 +1,4 @@
-import { SignUpPASSWORD, SignUpPHONE } from "./informations";
-
 export const ROUTES = {
-
   SIGNUP: "/auth/SignupScreen",
   SIGNUPNAME: "information/SignUpNameScreen",
   SIGNUPPHONE: "information/SignUpPhoneScreen",
@@ -18,7 +15,6 @@ export const ROUTES = {
   FLOW3_PAGE2: "/quiz-flow/Flow3_Page2",
   FLOW3_PAGE3: "/quiz-flow/Flow3_Page3",
   FLOW3_PAGE4: "/quiz-flow/Flow3_Page4",
-
 
   BODY_PARTS: "/bodyParts",
 
@@ -44,6 +40,44 @@ export const ROUTES = {
   ENTRY_TEST15: "/quiz/ET_15",
   ENTRY_TEST16: "/quiz/ET_16",
   ENTRY_TEST17: "/quiz/ET_17",
+
+  // Title mutil choice start
+  ENTRY_TEST18_MCS: "/quiz/ET_18_MCS",
+  ENTRY_TEST18_MCA: "/quiz/ET_18_MCA",
+  ENTRY_TEST20_MCT: "/quiz/ET_20_MCT",
+  ENTRY_TEST20_MCA: "/quiz/ET_20_MCA",
+  ENTRY_TEST21_MCS: "/quiz/ET_21_MCS",
+  ENTRY_TEST22_MCS: "/quiz/ET_22_MCS",
+  ENTRY_TEST22_MCA: "/quiz/ET_22_MCA",
+  ENTRY_TEST24_MCS: "/quiz/ET_24_MCS",
+  ENTRY_TEST24_MCA: "/quiz/ET_24_MCA",
+  ENTRY_TEST25_MCS: "/quiz/ET_25_MCS",
+  ENTRY_TEST25_MCA: "/quiz/ET_25_MCA",
+  ENTRY_TEST26_MCS: "/quiz/ET_26_MCS",
+  ENTRY_TEST26_IAQ: "/quiz/ET_26_IAQ",
+  ENTRY_TEST28_IAT: "/quiz/ET_28_IAT",
+  ENTRY_TEST28_IAQ: "/quiz/ET_28_IAQ",
+  ENTRY_TEST29_MCS: "/quiz/ET_29_MCS",
+  ENTRY_TEST29_MCS2: "/quiz/ET_29_MCS2",
+  ENTRY_TEST30_IAT: "/quiz/ET_30_IAT",
+  ENTRY_TEST30_IAQ: "/quiz/ET_30_IAQ",
+  ENTRY_TEST31_MCS: "/quiz/ET_31_MCS",
+  ENTRY_TEST31_MCA: "/quiz/ET_31_MCA",
+  ENTRY_TEST33_IAT: "/quiz/ET_33_IAT",
+  ENTRY_TEST33_IAT2: "/quiz/ET_33_IAT2",
+  ENTRY_TEST33_IAQ: "/quiz/ET_33_IAQ",
+  ENTRY_TEST35_IAT: "/quiz/ET_35_IAT",
+  ENTRY_TEST35_IAQ: "/quiz/ET_35_IAQ",
+  ENTRY_TEST36_IAT: "/quiz/ET_36_IAT",
+  ENTRY_TEST36_IAQ: "/quiz/ET_36_IAQ",
+  ENTRY_TEST37_MCS: "/quiz/ET_37_MCS",
+  ENTRY_TEST38_IAT: "/quiz/ET_38_IAT",
+  ENTRY_TEST38_IAQ: "/quiz/ET_38_IAQ",
+  ENTRY_TEST39_IAT: "/quiz/ET_39_IAT",
+  ENTRY_TEST39_IAQ: "/quiz/ET_39_IAQ",
+  ENTRY_TEST_FINISH: "/quiz/ET_Finish",
+  // ======================================
+
   ENTRY_TEST19: "/quiz/ET_19",
   ENTRY_TEST23: "/quiz/ET_23",
   ENTRY_TEST27: "/quiz/ET_27",
@@ -51,6 +85,5 @@ export const ROUTES = {
   ENTRY_TEST32: "/quiz/ET_32",
   ENTRY_TEST34: "/quiz/ET_34",
 
-
   INDEX: "/",
-} as const
+} as const;

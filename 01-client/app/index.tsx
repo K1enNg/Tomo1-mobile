@@ -20,20 +20,20 @@
 //        <NavigationContainer>
 //       <AppNavigator />
 //     </NavigationContainer>
-      
+
 //     </View>
 //   );
 // }
 
-import { Redirect, useRouter} from "expo-router";
 import { ROUTES } from "@/constants/Navigation";
+import { Redirect, useRouter } from "expo-router";
 
 export default function Index() {
   const router = useRouter();
   // Redirect to Flow 1
-  return <Redirect href= {ROUTES.INFORMATION1} />;
+  return <Redirect href={ROUTES.ENTRY_TEST1} />;
 
-    // return <Redirect href= {ROUTES.ENTRY_TEST1} />;
+  // return <Redirect href= {ROUTES.ENTRY_TEST1} />;
 
   // Ridirect to Sitemap for testing
   // return <Redirect href="/_sitemap" />;

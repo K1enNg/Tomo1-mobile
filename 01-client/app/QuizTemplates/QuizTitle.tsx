@@ -1,100 +1,116 @@
-import { Text, View, StyleSheet, Pressable, ImageSourcePropType } from "react-native";
+import {
+  Text,
+  View,
+  StyleSheet,
+  Pressable,
+  ImageSourcePropType,
+} from "react-native";
 import { Image } from "expo-image";
-import React, { useEffect } from 'react';
-import { useRouter } from "expo-router";
+import React, { useEffect } from "react";
+import { Href, useRouter } from "expo-router";
 import ProgressGroup from "../progressGroup";
+import Button from "@/components/ui/Button";
 
 export interface QuizTitleProps {
-    progress?: number;
-    source?: ImageSourcePropType;
-    description?: string;
-    btnText?: string;
-    time?: boolean;
-    next?: string
+  title?: string;
+  progress?: number;
+  source?: ImageSourcePropType;
+  description?: string;
+  btnText?: string;
+  time?: boolean;
+  next?: string;
 }
 
 const QuizTitle: React.FC<QuizTitleProps> = ({
-    progress,
-    source,
-    description,
-    btnText,
-    time,
-    next
+  title,
+  progress,
+  source,
+  description,
+  btnText,
+  time,
+  next,
 }) => {
   const router = useRouter();
 
-  time == true && useEffect(() => {
+  time == true &&
+    useEffect(() => {
       let timer = setTimeout(() => {
-        router.push(next); 
+        if (next) router.push(next as Href);
       }, 5000);
       return () => clearTimeout(timer);
     }, []);
 
   return (
     <View style={styles.container}>
-      
-      <View style={{ 
-        width: "100%"
-      }}>
-       { progress && <ProgressGroup progress={progress ?? 0}/> }
+      <View
+        style={{
+          width: "100%",
+        }}
+      >
+        {progress && <ProgressGroup progress={progress ?? 0} />}
       </View>
 
-      <View style= {{ 
+      <View
+        style={{
           flex: time == true ? 0 : 1,
           justifyContent: "center",
           alignItems: "center",
           width: "100%",
-        }}>
-        { source && <Image
-          source={source}
-          style = {{
-            width: 256,
-            height: 248,
-          }}
-        /> }
+        }}
+      >
+        {source && (
+          <Image
+            source={source}
+            style={{
+              width: 256,
+              height: 248,
+            }}
+          />
+        )}
       </View>
 
-      <View style= {{
+      <View
+        style={{
           width: 340,
           height: 100,
           marginBottom: 80,
-        }}>
-
-        {description && <Text style = {[styles.nunitoLight, {fontSize: 18, textAlign: "center"}]}> 
-          {description}
-        </Text>
-        }
-
+        }}
+      >
+        {description && (
+          <Text
+            style={[styles.nunitoLight, { fontSize: 18, textAlign: "center" }]}
+          >
+            {description}
+          </Text>
+        )}
       </View>
-      
-        { btnText && <View style= {{
-          justifyContent: "center",
-          alignItems: "center",
-          backgroundColor:"#fcc555",
-          width: 340,
-          height: 50,
-          borderRadius: 20, 
-          marginBottom: 60
-        }}>
 
-          { btnText && <Pressable
-          style = {{
+      {btnText && (
+        <View
+          style={{
+            justifyContent: "center",
+            alignItems: "center",
+            backgroundColor: "#fcc555",
             width: 340,
-            height: 30,
-          }}
-          onPress={() => {   
-            router.push(next);
+            height: 50,
+            borderRadius: 20,
+            marginBottom: 60,
           }}
         >
-
-          { btnText && <Text style = {[styles.nunitoSemiBold, {fontSize: 24, textAlign: "center"}]}> 
-            {btnText}
-          </Text> }
-        </Pressable> } 
-      </View>}
+          {btnText && (
+            <Button
+              onPress={() => {
+                if (next) router.push(next as Href);
+              }}
+            >
+              btnText
+            </Button>
+          )}
+        </View>
+      )}
     </View>
   );
-}
+};
 
 export default QuizTitle;
 
@@ -103,7 +119,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor:"#cfeef8"
+    backgroundColor: "#cfeef8",
   },
   nunitoLight: {
     fontFamily: "Nunito-Light",

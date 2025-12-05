@@ -1,7 +1,7 @@
-import Button from "@/app/button";
-import CloseBtn from "@/app/closeBtn";
+import Button from "@/components/ui/Button";
+import CloseBtn from "@/components/ui/CloseBtn";
 import ProgressBar from "@/app/progressBar";
-import SettingBtn from "@/app/settingBtn";
+import SettingBtn from "@/components/ui/SettingBtn";
 import { View } from "react-native";
 
 function Flow3SubComps() {

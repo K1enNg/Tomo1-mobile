@@ -1,4 +1,4 @@
-import Button from "@/app/button";
+import Button from "@/components/ui/Button";
 import { useRouter } from "expo-router";
 import React from "react";
 import {
@@ -9,7 +9,7 @@ import {
   View,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import CloseBtn from "./closeBtn";
+import CloseBtn from "@/components/ui/CloseBtn";
 import ProgressGroup from "./progressGroup";
 
 export interface Flow3Props {
