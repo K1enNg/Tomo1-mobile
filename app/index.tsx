@@ -20,13 +20,13 @@
 //        <NavigationContainer>
 //       <AppNavigator />
 //     </NavigationContainer>
-      
+
 //     </View>
 //   );
 // }
 
-import { Redirect, useRouter} from "expo-router";
-import { ROUTES } from "../constants/naviagtion";
+import { Redirect, useRouter } from "expo-router";
+import { ROUTES } from "../routes/naviagtion";
 
 export default function Index() {
   const router = useRouter();
@@ -37,5 +37,5 @@ export default function Index() {
   // return <Redirect href="/_sitemap" />;
 
   //Redirect to Entry Test Q1 For testing Data Collection Logic
-  return <Redirect href={ROUTES.ENTRY_TEST1}/>
+  return <Redirect href={ROUTES.ENTRY_TEST1} />;
 }

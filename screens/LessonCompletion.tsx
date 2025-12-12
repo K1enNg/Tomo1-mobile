@@ -1,4 +1,4 @@
-import Button from "./ui/Button";
+import Button from "../components/common/Button";
 import { useRouter } from "expo-router";
 import React from "react";
 import {
@@ -9,11 +9,9 @@ import {
   View,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import CloseBtn from "./ui/CloseBtn";
-import ProgressGroup from "./ProgressGroup";
+import CloseBtn from "../components/ui/CloseBtn";
+import ProgressGroup from "../components/ui/ProgressGroup";
 import { LessonCompletionProps } from "@/types/components";
-
-
 
 const LessonCompletion: React.FC<LessonCompletionProps> = ({
   progress,

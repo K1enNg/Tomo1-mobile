@@ -1,5 +1,5 @@
 import { InformationProps } from "@/app/Information";
-import { ROUTES } from "./naviagtion";
+import { ROUTES } from "../routes/naviagtion";
 
 export const PAGE_1: InformationProps = {
   source: require("../assets/images/informations/img_1.png"),
@@ -14,7 +14,8 @@ export const PAGE_1: InformationProps = {
 export const PAGE_2: InformationProps = {
   source: require("../assets/images/informations/img_2.png"),
   title: "Khám phá tính năng",
-  description: "Dễ dàng theo dõi tiến trình, lưu trữ thông tin và chia sẻ kiến thức với bạn bè.",
+  description:
+    "Dễ dàng theo dõi tiến trình, lưu trữ thông tin và chia sẻ kiến thức với bạn bè.",
   buttonLabels: ["Tiếp tục", "Bỏ qua"],
   nextScreen: ROUTES.INFORMATION3,
   skipScreen: ROUTES.SIGNUP,

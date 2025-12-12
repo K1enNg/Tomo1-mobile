@@ -8,10 +8,8 @@ import {
   View,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import ProgressGroup from "./ProgressGroup";
+import ProgressGroup from "../components/ui/ProgressGroup";
 import { BodyPartsProps } from "@/types/components";
-
-
 
 const BodyParts: React.FC<BodyPartsProps> = ({ progress, source, text }) => {
   return (

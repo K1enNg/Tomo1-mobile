@@ -1,8 +1,8 @@
-import Button from "./ui/Button";
-import CloseBtn from "./ui/CloseBtn";
+import Button from "../components/common/Button";
+import CloseBtn from "../components/ui/CloseBtn";
 // import ProgressBar from "./ProgressBar";
-import ProgressGroup from "./ProgressGroup";
-import SettingBtn from "./ui/SettingBtn";
+import ProgressGroup from "../components/ui/ProgressGroup";
+import SettingBtn from "../components/ui/SettingBtn";
 import { View } from "react-native";
 
 function LessonControls() {
